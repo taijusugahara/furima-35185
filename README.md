@@ -11,7 +11,7 @@
 | last_name             | string | null: false                   |
 | first_name_kana       | string | null: false                   |
 | last_name_kana        | string | null: false                   |
-| date                  | string | null: false                   |
+| birthday              | date   | null: false                   |
 
 ### Association
 
@@ -27,9 +27,9 @@
 | category_id           | integer    | null: false                    |
 | items_status_id       | integer    | null: false                    |
 | derivery_way_id       | integer    | null: false                    |
-| local_area_id         | integer    | null: false                    |
+| prefecture_id         | integer    | null: false                    |
 | derivery_day_id       | integer    | null: false                    |
-| price                 | string     | null: false                    |
+| price                 | integer    | null: false                    |
 | user                  | references | null: false, foreign_key: true |
 
 ### Association
