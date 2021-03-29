@@ -58,7 +58,7 @@
 | postal_code           | string     | null: false                    |
 | prefecture_id         | integer    | null: false                    |
 | town                  | string     | null: false                    |
-| address               | string     | null: false                    |
+| residence             | string     | null: false                    |
 | building              | string     |                                |
 | tell_number           | string     | null: false                    |
 | order                 | references | null: false, foreign_key: true |
