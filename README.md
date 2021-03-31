@@ -25,7 +25,7 @@
 | name                  | string     | null: false                    |
 | explanation           | text       | null: false                    |
 | category_id           | integer    | null: false                    |
-| items_status_id       | integer    | null: false                    |
+| item_status_id       | integer    | null: false                    |
 | derivery_way_id       | integer    | null: false                    |
 | prefecture_id         | integer    | null: false                    |
 | derivery_day_id       | integer    | null: false                    |
