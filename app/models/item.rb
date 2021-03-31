@@ -7,8 +7,8 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :derivery_day
   has_one_attached :image
-  validates :name, :explanation, :image, :price, presence: true
+  validates :name, :explanation, :image, presence: true
   validates :category_id, :item_status_id, :derivery_way_id, :prefecture_id, :derivery_day_id, numericality: { other_than: 1 } 
-  
+  validates :price, numericality: { in: 300..9999999 }
 end
  
