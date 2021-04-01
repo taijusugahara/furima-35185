@@ -12,8 +12,8 @@ class Item < ApplicationRecord
     with_options numericality: { other_than: 1 } do
       validates :category_id, :item_status_id, :derivery_way_id, :prefecture_id, :derivery_day_id
       with_options numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 } do
-        validates :price 
+        validates :price
       end
     end
-  end    
+  end
 end
