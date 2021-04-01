@@ -6,11 +6,11 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :nickname
     with_options format: { with: /[^ -~｡-ﾟ]+/ } do
-      validates :last_name 
+      validates :last_name
       validates :first_name
     end
     with_options format: { with: /[\p{katakana}　ー－]+/ } do
-      validates :last_name_kana 
+      validates :last_name_kana
       validates :first_name_kana
     end
     validates :birthday
