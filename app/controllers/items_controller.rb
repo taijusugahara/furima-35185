@@ -20,11 +20,9 @@ class ItemsController < ApplicationController
   end
 
   def show
-    
   end
 
   def edit
-  
   end
 
   def update
@@ -52,11 +50,9 @@ class ItemsController < ApplicationController
   def item_record
     @item = Item.find(params[:id])
   end
-  
+
   def move_to_index
     redirect_to action: :index unless current_user.id == @item.user.id
     redirect_to action: :index if @item.order
   end
-
-  
 end
