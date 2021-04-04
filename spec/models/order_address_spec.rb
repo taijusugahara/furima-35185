@@ -73,11 +73,36 @@ RSpec.describe OrderAddress, type: :model do
         expect(@order_address.errors.full_messages).to include('Tell number is invalid')
       end
 
+      it 'tell_numberが12桁以上だと購入できない' do
+        @order_address.tell_number = '012345678912'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include('Tell number is invalid')
+      end
+
+      it 'tell_numberが英数字混合だと購入できない' do
+        @order_address.tell_number = '0123456abcd'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include('Tell number is invalid')
+      end
+
       it 'tell_numberが全角入力だと購入できない' do
         @order_address.tell_number = '０１２３４５６７８９０'
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include('Tell number is invalid')
       end
+
+      it 'user_idが空だと購入できない' do
+        @order_address.user_id = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("User can't be blank")
+      end
+
+      it 'item_idが空だと購入できない' do
+        @order_address.item_id = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Item can't be blank")
+      end
+
     end
   end
 end
